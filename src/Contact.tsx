@@ -36,7 +36,7 @@ const Contact = () => {
             awesome!
           </p>
         </div>
-        <div className="mx-auto lg:w-3/4 md:w-5/6">
+        <div className="w-full mx-auto lg:w-3/4 md:w-5/6">
           <form ref={form} onSubmit={sendEmail}>
             <div className="flex flex-wrap -m-2">
               <div className="w-full p-2">

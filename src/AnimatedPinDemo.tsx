@@ -4,7 +4,7 @@ import { PinContainer } from "./components/ui/3d-pin";
 
 export function AnimatedPinDemo() {
   return (
-    <div className="grid grid-cols-1 gap-1 p-4 md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-16 p-4 md:gap-1 md:grid-cols-3">
       <PinContainer
         title="Newsletter Prototype"
         href="https://newsletter-prototype-frontend.vercel.app"

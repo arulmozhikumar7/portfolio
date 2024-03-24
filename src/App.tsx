@@ -1,6 +1,6 @@
 import { AnimatedPinDemo } from "./AnimatedPinDemo";
 import BoxBackgroundDemo from "./BoxBackgroundDemo";
-
+import { Toaster } from "./components/ui/toaster";
 import Hero from "./Hero";
 import { SignupFormDemo } from "./Input";
 import MovingCards from "./MovingCards";
@@ -28,6 +28,7 @@ function App() {
       <MovingCards />
 
       <SignupFormDemo />
+      <Toaster />
     </>
   );
 }
