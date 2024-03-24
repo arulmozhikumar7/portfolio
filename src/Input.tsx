@@ -38,8 +38,8 @@ export function SignupFormDemo() {
   };
 
   return (
-    <div className="grid grid-cols-12 bg-black ">
-      <div className="grid col-span-6 p-4 mx-auto bg-black rounded-none md:p-8 shadow-input">
+    <div className="grid grid-cols-1 bg-black md:grid-cols-12 ">
+      <div className="grid p-4 mx-auto bg-black rounded-none md:col-span-6 md:p-8 shadow-input">
         <h2 className="text-xl font-bold text-neutral-200">Contact Me</h2>
         <p className="max-w-sm mt-2 text-sm text-neutral-300">
           Feel free to reach out anytime, and let's make this conversation
