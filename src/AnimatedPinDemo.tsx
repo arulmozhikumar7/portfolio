@@ -68,7 +68,7 @@ export function AnimatedPinDemo() {
 
         <PinContainer
           title="Pizza Ordering Application"
-          href="https://expense-tracker-psi-five-33.vercel.app"
+          href="https://pizza-delivery-application-frontend.vercel.app/"
         >
           <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
             <h3 className="pb-2 text-base font-bold text-slate-100">
