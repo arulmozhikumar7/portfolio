@@ -4,7 +4,8 @@ import { Label } from "./components/ui/label";
 import { Input } from "./components/ui/input";
 import { cn } from "./utils/cn";
 import emailjs from "@emailjs/browser";
-import { useToast } from "./components/ui/use-toast";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useRef, useState } from "react";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaMedium } from "react-icons/fa6";
 export function SignupFormDemo() {
@@ -14,7 +15,7 @@ export function SignupFormDemo() {
     message: "",
   });
   const form = useRef<HTMLFormElement>(null);
-  const { toast } = useToast();
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (form.current) {
@@ -25,10 +26,8 @@ export function SignupFormDemo() {
         .then(
           () => {
             setFormData({ name: "", email: "", message: "" });
-            toast({
-              title: "Hey I received your message!",
-              description: "I'll get back to you as soon as possible!",
-            });
+            toast.success("Hey! I received your message.");
+            toast.info("I'll get back to you soon!");
           },
           (error: Error) => {
             console.log("FAILED...", error);
@@ -52,7 +51,7 @@ export function SignupFormDemo() {
               <Label htmlFor="firstname">Name</Label>
               <Input
                 id="firstname"
-                placeholder="Tyler"
+                placeholder="Arulmozhikumar"
                 type="text"
                 name="name"
                 value={formData.name}
@@ -98,41 +97,108 @@ export function SignupFormDemo() {
           </button>
         </form>
       </div>
-      <div className="flex flex-row items-center justify-center w-full p-4 mx-auto bg-black rounded-none md:p-8">
-        <a
-          href="https://github.com/arulmozhikumar7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mr-4 text-white"
-        >
-          <FaGithub className="text-white" />
-        </a>
-        <a
-          href="www.linkedin.com/in/arulmozhikumar7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mr-4 text-white"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="https://wa.me/918122509442?text=Hi Arul, I would like to get in touch with you"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mr-4 text-white"
-        >
-          <FaWhatsapp />
-        </a>
+      <div className="grid w-full p-4 mx-auto bg-black rounded-none md:col-span-6 md:p-8">
+        <div className="">
+          <h2 className="text-xl font-bold text-neutral-200">Social Links</h2>
+          <p className="max-w-sm mt-2 text-sm text-neutral-300">
+            Let us connect on social media
+          </p>
+          <div className="flex mt-4 ">
+            <a
+              href="https://github.com/arulmozhikumar7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-4 text-white"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href="www.linkedin.com/in/arulmozhikumar7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-4 text-white"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://wa.me/918122509442?text=Hi Arul, I would like to get in touch with you"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-4 text-white"
+            >
+              <FaWhatsapp size={24} />
+            </a>
 
-        <a
-          href="https://medium.com/@arulmozhikumar7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mr-4 text-white"
-        >
-          <FaMedium />
-        </a>
+            <a
+              href="https://medium.com/@arulmozhikumar7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-4 text-white"
+            >
+              <FaMedium size={24} />
+            </a>
+          </div>
+          <h2 className="mt-8 text-xl font-bold text-neutral-200">
+            Blog Links
+          </h2>
+          <div>
+            <ul className="mt-4 ">
+              <li className="mb-1 text-neutral-300">
+                {" "}
+                <a
+                  href="https://medium.com/@arulmozhikumar7/3-useful-libraries-for-react-applications-46344e045a17"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-thin text-gray-200 hover:text-emerald-300"
+                >
+                  3 Useful Libraries for React Applications
+                </a>
+              </li>
+              <li className="text-neutral-300">
+                {" "}
+                <a
+                  href="https://medium.com/@arulmozhikumar7/a-battle-of-frontend-build-tools-npx-create-react-app-vs-vite-b00452ea5d6d"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-thin text-gray-200 hover:text-emerald-300"
+                >
+                  Create-react-app vs Vite
+                </a>
+              </li>
+            </ul>
+          </div>
+          <h2 className="mt-8 text-xl font-bold text-neutral-200">
+            Other Links
+          </h2>
+          <div>
+            <ul className="mt-4 ">
+              <li className="mb-1 text-neutral-300">
+                {" "}
+                <a
+                  href="https://github.com/stars/arulmozhikumar7/lists/react-projects"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-thin text-gray-200 hover:text-emerald-300"
+                >
+                  List of React Projects
+                </a>
+              </li>
+              <li className="text-neutral-300">
+                {" "}
+                <a
+                  href="https://github.com/stars/arulmozhikumar7/lists/chatbot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-thin text-gray-200 hover:text-emerald-300"
+                >
+                  Chatbots with Wit.ai
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

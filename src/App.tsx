@@ -1,6 +1,6 @@
 import { AnimatedPinDemo } from "./AnimatedPinDemo";
 import BoxBackgroundDemo from "./BoxBackgroundDemo";
-import { Toaster } from "./components/ui/toaster";
+
 import Hero from "./Hero";
 import { SignupFormDemo } from "./Input";
 import MovingCards from "./MovingCards";
@@ -16,19 +16,10 @@ function App() {
       <Hero />
       <Projects />
       <AnimatedPinDemo />
-      {/* <Contact />
- <div className="flex items-center justify-center mt-9">
-        {" "}
-        <TextRevealCard
-          text={"You Know the business"}
-          revealText="I Know the technology"
-        />
-      </div> */}
 
       <MovingCards />
 
       <SignupFormDemo />
-      <Toaster />
     </>
   );
 }
