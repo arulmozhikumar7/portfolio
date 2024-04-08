@@ -113,7 +113,7 @@ export function SignupFormDemo() {
               <FaGithub size={24} />
             </a>
             <a
-              href="www.linkedin.com/in/arulmozhikumar7"
+              href="https://www.linkedin.com/in/arulmozhikumar7"
               target="_blank"
               rel="noopener noreferrer"
               className="mr-4 text-white"
